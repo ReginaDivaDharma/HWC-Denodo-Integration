@@ -318,7 +318,11 @@ Locate them under **My Account → Access Keys**.
             "Action": [
                 "csms:secretVersion:get",
                 "csms:secretVersion:list",
-                "kms:dek:decrypt"
+                "kms:dek:decrypt", 
+                "kms:dek:create", // Put this line if your bucket is encrypted
+                "kms:cmk:get", // Put this line if your bucket is encrypted
+                "kms:cmk:list", // Put this line if your bucket is encrypted
+                "kms:cmk:getMaterial" // Put this line if your bucket is encrypted
             ]
         }
     ]
