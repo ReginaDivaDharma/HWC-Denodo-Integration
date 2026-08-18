@@ -405,6 +405,7 @@ https://console-intl.huaweicloud.com/apiexplorer/#/endpoint
 ### C. Install the DLI JDBC Driver in Denodo
 
 **1. Import the driver**
+You can refer to Huawei DLI's driver that is compatible with Denodo in this link : https://drive.google.com/drive/folders/1rBTg-lA_NBqZp5WG32wTZyq83BdOUQao?usp=sharing
 
 In Denodo Design Studio:
 
