@@ -507,6 +507,6 @@ The data in Denodo now aligns with the corresponding DLI table.
 
 ---
 
-*Last updated: April 2026*
+*Last updated: August 2026*
 
-*For questions, contact regina.diva333@gmail.com*
+*For questions, contact reginadivadharma@gmail.com*
