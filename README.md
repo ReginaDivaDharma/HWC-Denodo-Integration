@@ -1,34 +1,35 @@
-# HWC-Denodo Integration 🔗
+# Huawei Cloud – Denodo Integration
 
-> A summary of integration methods between **Denodo** and **Huawei Cloud's Big Data Platform**.
-> 
-> ⚠️ *This documentation was written in early 2026 some details may have changed.*
+A summary of integration methods between Denodo and the Huawei Cloud Big Data Platform.
 
----
-
-## 📖 Background
-
-**Denodo** is a data virtualization tool that acts as a unified layer over many data sources, whether on-premises or cloud-based, across a wide range of vendors. Importantly, Denodo only acts as a virtualization layer **it does not store any data**. So the only way we can connect to it is by using the JDBC protocol.
- 
----
-
-## ❓ Problem
-
-Denodo supports the **JDBC protocol**, which can theoretically be used by Huawei Cloud's Big Data tools to extract data. This documentation covers what worked, what didn't, and how to extract Denodo table views into the Huawei Cloud Big Data Platform.
+> **Note:** This documentation was written in early 2026. Some details may have changed since publication.
 
 ---
 
-## ✅ Solution
+## Background
 
-Two integration approaches were explored:
+Denodo is a data virtualization platform that provides a unified access layer over heterogeneous data sources, both on-premises and cloud-based, across a wide range of vendors. Because Denodo virtualizes rather than persists data, it holds no storage of its own. Connectivity is therefore limited to the JDBC protocol.
 
-| Method | Status | Guide |
+---
+
+## Problem Statement
+
+Denodo exposes its views over JDBC, which in principle allows Huawei Cloud Big Data services to extract data from it. This document records which integration paths were validated, which were not viable, and the recommended approach for ingesting Denodo view data into the Huawei Cloud Big Data Platform.
+
+---
+
+## Solution Overview
+
+Two integration approaches were evaluated:
+
+| Method | Status | Reference |
 |---|---|---|
-| Data Lake Insight (DLI) | ✅ Working | [View Guide](dli-integration.md) |
-| Data Warehouse Service (DWS) | ⚠️ See notes | DWS does not have a JDBC driver |
+| Data Lake Insight (DLI) | Validated | [Integration guide](dli-integration.md) |
+| Data Warehouse Service (DWS) | Not supported — no JDBC driver available | [Notes](dws-integration.md) |
 
-The general flow is:
-1. [Prepare your data](data-preparation.md)
-2. [Prepare your denodo](Denodo-server.md)
-3. [DLI Integration](dli-integration.md)
-4. [DWS Integration (This is not possible)](dws-integration.md)
+### Recommended Sequence
+
+1. [Data preparation](data-preparation.md)
+2. [Denodo server configuration](Denodo-server.md)
+3. [DLI integration](dli-integration.md)
+4. [DWS integration — not viable](dws-integration.md)
